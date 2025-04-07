@@ -1,81 +1,114 @@
-# Customer Retention
+📉 Customer Churn Prediction using Machine Learning
+This project aims to build a predictive model that accurately identifies potential customer churn using machine learning techniques. The goal is to empower businesses with actionable insights to improve customer retention strategies by understanding key factors that drive churn.
 
-## 🔴 Detailed Session on EDA:
+📌 Table of Contents
+Overview
 
-[![Alt text](https://user-images.githubusercontent.com/34673684/117579611-49cd5880-b126-11eb-9e2b-ef865c090808.png)](https://www.youtube.com/watch?v=baL7OrGWlxs)
+Problem Statement
 
-## 🔴 One of my previous Sessions on EDA, Model Building & Model Deployment: 
+Technologies Used
 
-[![Alt text](https://raw.githubusercontent.com/pik1989/MLProject-Churn-Analysis-And-Prediction-Model/main/images/CC.JPG)](https://www.youtube.com/watch?v=GVECbcKUio4)
+Data Source
 
-## 🔴 What is Customer Churning ?
+Project Workflow
 
-![Customer Retention](https://raw.githubusercontent.com/pik1989/MLProject-Churn-Analysis-And-Prediction-Model/main/images/Telco1.JPG)
+Key Features
 
-## 🔴 What are the different Churn Scenarios ?
+Results
 
-![Churn Scenarios](https://raw.githubusercontent.com/pik1989/MLProject-Churn-Analysis-And-Prediction-Model/main/images/Telco2.JPG)
-
-## 🔴 Decision Cycle of a Subscriber ?
-
-![Decision Cycle](https://raw.githubusercontent.com/pik1989/MLProject-Churn-Analysis-And-Prediction-Model/main/images/Telco3.JPG)
-
-## 🔴 What are the different Churn Segments ?
-
-![Churn Segments](https://raw.githubusercontent.com/pik1989/MLProject-Churn-Analysis-And-Prediction-Model/main/images/Telco4.JPG)
-
-## 🔴 Solution Overview
-
-![Solution](https://raw.githubusercontent.com/pik1989/MLProject-Churn-Analysis-And-Prediction-Model/main/images/Telco5.JPG)
+Future Improvements
 
 
-In this repository, we have performed the end to end Exploratory Data Analysis, and idenfitied the characteristics of the customers that are more likely to churn, and I have used them wisely to create a model, and lately, have deployed the model.
+🧾 Overview
+Customer churn is a major concern for subscription-based businesses and service providers. Predicting churn ahead of time allows organizations to proactively engage with at-risk customers. In this project, we preprocess the dataset, perform feature engineering, train multiple machine learning models, and evaluate their performance to identify the most accurate predictor of churn.
 
-### 🟢 For EDA, please refer to : Churn Analysis - EDA.ipynb
-### 🟢 For Model Building, please refer to: Churn Analysis - Model Building.ipynb
-### 🟢 For Model Deployment, please refer to app.py
+❓ Problem Statement
+To develop a machine learning model that predicts whether a customer will churn (i.e., leave the service), based on various customer demographic, account, and usage attributes.
 
+⚙️ Technologies Used
+Python
 
-### 🔵 Creating the flask API
+Pandas, NumPy – Data wrangling
 
-```
-app = Flask("__name__")
-```
+Matplotlib, Seaborn – Data visualization
 
-The loadPage method calls our home.html.
-```
-@app.route("/")
-def loadPage():
-	return render_template('home.html', query="")
-```
+Scikit-learn – Machine learning models & evaluation
 
-The predict method is our POST method, which is basically called when we pass all the inputs from our front end and click SUBMIT.
-```
-@app.route("/", methods=['POST'])
-def predict():
-```
-  
-The run() method of Flask class runs the application on the local development server.
-```
-app.run()
-```
+XGBoost – Advanced classification
 
+Jupyter Notebook – Interactive development
 
-Yay, our model is ready, let’s test our bot.
-The above given Python script is executed from Python shell.
+📊 Data Source
+The dataset used for this project is from the Telco Customer Churn dataset, widely available on Kaggle. It includes features like:
 
-Go to Anaconda Prompt, and run the below query.
-```
-python app.py
-```
+Customer tenure
 
+Monthly charges
 
-Below message in Python shell is seen, which indicates that our App is now hosted at http://127.0.0.1:5000/ or localhost:5000
-```
-* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-```
+Services subscribed
 
+Contract type
 
-HERE'S HOW OUR FRONTEND LOOKS LIKE:
+Payment method
 
-![Customer Retention](https://raw.githubusercontent.com/pik1989/MLProject-Churn-Analysis-And-Prediction-Model/main/images/Telco6.JPG)
+Internet usage
+
+Demographics (gender, senior citizen, partner, etc.)
+
+🔄 Project Workflow
+Data Collection
+
+Data Cleaning & Preprocessing
+
+Exploratory Data Analysis (EDA)
+
+Feature Engineering
+
+Model Building (Logistic Regression, Decision Tree, Random Forest, XGBoost)
+
+Model Evaluation (Accuracy, Precision, Recall, F1 Score, AUC-ROC)
+
+Interpretation of Results
+
+Insights & Recommendations
+
+🚀 Key Features
+Comprehensive EDA with visual insights
+
+Balanced dataset using appropriate techniques
+
+Multiple ML models trained and compared
+
+Hyperparameter tuning using GridSearchCV
+
+Model performance evaluated using confusion matrix and ROC-AUC
+
+Final model ready for deployment
+
+📈 Results
+Best Model: XGBoost Classifier
+
+Accuracy: ~82%
+
+AUC-ROC Score: ~0.88
+
+Top Features Influencing Churn:
+
+Tenure
+
+Contract Type
+
+Monthly Charges
+
+Internet Service
+
+Tech Support Availability
+
+🔧 Future Improvements
+Integrate SHAP or LIME for model explainability
+
+Deploy model using Flask/Django or Streamlit
+
+Integrate with a dashboard (e.g., Power BI or Tableau)
+
+Automate retraining pipeline using CI/CD
